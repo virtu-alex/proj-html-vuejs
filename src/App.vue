@@ -7,11 +7,15 @@
 </template>
 
 <script>
-import BaseHeader from "./components/BaseHeader.vue"
+  import BaseHeader from "./components/BaseHeader.vue";
   export default {
     name: "App",
     components: {BaseHeader},
   };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+  @import "~bootstrap/scss/bootstrap";
+
+
+</style>

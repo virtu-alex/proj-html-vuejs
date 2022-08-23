@@ -23,6 +23,8 @@
   }
   .secondary{
       background-color: transparent;
-      border: .5px solid #038384;
+      border: 1px solid #038384;
+      padding-left: 20px;
+      padding-right: 20px;
   }
 </style>
