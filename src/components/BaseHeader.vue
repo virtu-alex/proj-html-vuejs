@@ -36,11 +36,11 @@
         </ul>
         <ul class="d-flex align-items-center justify-content-end w-75">
           <li><a href="">Home</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Services</a></li>
-          <li><a href="">Process</a></li>
-          <li><a href="">Testimonial</a></li>
-          <li><font-awesome-icon class="user" icon="fa-solid fa-user" /></li>
+          <li class="px-4"><a href="">About</a></li>
+          <li class="px-4"><a href="">Services</a></li>
+          <li class="px-4"><a href="">Process</a></li>
+          <li class="px-4"><a href="">Testimonial</a></li>
+          <li><font-awesome-icon class="user px-2" icon="fa-solid fa-user" /></li>
           <li><BaseButton text="get in touch" /></li>
         </ul>
       </div>
@@ -86,11 +86,7 @@
     faLinkedinIn,
   } from "@fortawesome/free-brands-svg-icons";
   /* add icons to the library */
-  library.add(faPhone, faEnvelope, faUser);
-  library.add(faFacebookF, faTwitter, faLinkedinIn);
-
-  /* add icons to the library */
-  library.add(faClock);
+  library.add(faPhone, faEnvelope, faUser, faFacebookF, faTwitter, faLinkedinIn, faClock);
 
   export default {
     name: "BaseHeader",
@@ -127,8 +123,9 @@
     color: white;
   }
   .subtitle {
-    font-size: 120px;
+    font-size: 5rem;
     font-family: "Alfa Slab One", cursive;
+    text-transform: uppercase;
   }
   .jumbotron-description {
     padding-top: 7rem;
