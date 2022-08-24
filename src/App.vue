@@ -11,6 +11,7 @@
 <script>
   import BaseHeader from "./components/BaseHeader.vue";
   import BaseMain from "./components/BaseMain.vue";
+
   export default {
     name: "App",
     components: {BaseHeader, BaseMain},
@@ -20,5 +21,7 @@
 <style lang="scss">
   @import "~bootstrap/scss/bootstrap";
 
-
+  ul {
+    list-style: none;
+  }
 </style>

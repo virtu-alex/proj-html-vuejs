@@ -27,20 +27,18 @@
       <div class="links container d-flex">
         <ul class="w-25 p-0">
           <li class="p-0">
-            <img
-              class="logo img-fluid pt-2"
-              :src="require('@/assets/Images/logo.svg')"
-              alt="logo"
-            />
+            <BaseLogo />
           </li>
         </ul>
         <ul class="d-flex align-items-center justify-content-end w-75">
           <li><a href="">Home</a></li>
-          <li class="px-4"><a href="">About</a></li>
-          <li class="px-4"><a href="">Services</a></li>
-          <li class="px-4"><a href="">Process</a></li>
-          <li class="px-4"><a href="">Testimonial</a></li>
-          <li><font-awesome-icon class="user px-2" icon="fa-solid fa-user" /></li>
+          <li class="px-4"><a href="#">About</a></li>
+          <li class="px-4"><a href="#services">Services</a></li>
+          <li class="px-4"><a href="#process">Process</a></li>
+          <li class="px-4"><a href="#testimonials">Testimonial</a></li>
+          <li>
+            <font-awesome-icon class="user px-2" icon="fa-solid fa-user" />
+          </li>
           <li><BaseButton text="get in touch" /></li>
         </ul>
       </div>
@@ -66,6 +64,8 @@
 
 <script>
   import BaseButton from "./BaseButton.vue";
+  import BaseLogo from "./BaseLogo.vue";
+
   import data from "../data";
   /* import the fontawesome core */
   import {library} from "@fortawesome/fontawesome-svg-core";
@@ -86,11 +86,19 @@
     faLinkedinIn,
   } from "@fortawesome/free-brands-svg-icons";
   /* add icons to the library */
-  library.add(faPhone, faEnvelope, faUser, faFacebookF, faTwitter, faLinkedinIn, faClock);
+  library.add(
+    faPhone,
+    faEnvelope,
+    faUser,
+    faFacebookF,
+    faTwitter,
+    faLinkedinIn,
+    faClock
+  );
 
   export default {
     name: "BaseHeader",
-    components: {BaseButton, FontAwesomeIcon},
+    components: {BaseButton, FontAwesomeIcon, BaseLogo},
     data() {
       return {...data};
     },
