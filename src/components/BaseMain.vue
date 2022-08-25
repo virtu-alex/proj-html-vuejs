@@ -20,11 +20,9 @@
               {{ halfLorem }}
             </p>
             <ul class="text-secondary">
-              <li>Lorem ipsum dolor sit amet</li>
-              <li>consectetur adipisicing elit</li>
-              <li>Non quam, sit nam vel</li>
-              <li>dolor sit amet consectetur adipisicing elit</li>
-              <li>sunt quod natus veritatis tempore fugit</li>
+              <li v-for="(description, i) in transportDescription" :key="i">
+                {{ description.text }}
+              </li>
             </ul>
           </div>
           <div class="col-4">
@@ -38,57 +36,41 @@
     <section id="services" class="main-services pt-5 text-white bg-dark">
       <div class="container">
         <div class="row">
-          <div class="col-9">
+          <div class="col-7">
             <h5 class="presentation">ROAD TRANSPORT</h5>
-            <h2><strong>Main</strong> <strong>Services</strong></h2>
-            <p>
-              {{ expertiseText }}
-            </p>
           </div>
-          <div class="col-3">
-            <BaseButton />
+          <h2><strong>Main</strong> <strong class="nome">Services</strong></h2>
+          <div class="row">
+            <div class="col-10">
+              <p>
+                {{ expertiseText }}
+              </p>
+            </div>
+            <div class="col-2">
+              <BaseButton />
+            </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-4">component</div>
-          <div class="col-4">component</div>
-          <div class="col-4">component</div>
-        </div>
+        <ServiceCard />
       </div>
     </section>
     <!-- LOGISTICAL SECTION -->
     <section id="process" class="logistical pt-5">
-      <div class="row justify-content-center">
-        <div class="col-8 text-center">
-          <h5>How it Works in practice</h5>
-          <h1>Logistical Procedure</h1>
-          <p>
-            We Work with innovative methodologies to ensure that the entire
-            delivery process is done from start to finish as planned.
-          </p>
-        </div>
+      <div class="col-2">
+        <h5>Collection of information</h5>
+        <p>{{ halfLorem }}</p>
       </div>
-      <div class="row justify-content-center">
-        <div class="col-2">
-          <h5>Collection of information</h5>
-          <p>{{ halfLorem }}</p>
-        </div>
-        <div class="col-2">
-          <h5>Collection of information</h5>
-          <p>{{ halfLorem }}</p>
-        </div>
-        <div class="col-2">
-          <h5>Collection of information</h5>
-          <p>{{ halfLorem }}</p>
-        </div>
-        <div class="col-2">
-          <h5>Collection of information</h5>
-          <p>{{ halfLorem }}</p>
-        </div>
-        <div class="col-2">
-          <h5>Collection of information</h5>
-          <p>{{ halfLorem }}</p>
-        </div>
+      <div class="col-2">
+        <h5>Collection of information</h5>
+        <p>{{ halfLorem }}</p>
+      </div>
+      <div class="col-2">
+        <h5>Collection of information</h5>
+        <p>{{ halfLorem }}</p>
+      </div>
+      <div class="col-2">
+        <h5>Collection of information</h5>
+        <p>{{ halfLorem }}</p>
       </div>
     </section>
     <!-- RESULTS SECTION -->
@@ -221,6 +203,7 @@
   import BaseButton from "./BaseButton.vue";
   import BaseLogo from "./BaseLogo.vue";
   import BaseForm from "./BaseForm.vue";
+  import ServiceCard from "./ServiceCard.vue";
   import data from "../data";
   import VehicleTypes from "./VehicleTypes.vue";
   import {library} from "@fortawesome/fontawesome-svg-core";
@@ -241,6 +224,7 @@
       FontAwesomeIcon,
       BaseForm,
       BaseLogo,
+      ServiceCard,
     },
     data() {
       return {...data};
@@ -269,6 +253,11 @@
     background-size: cover;
     padding-top: 80px;
     padding-bottom: 200px;
+  }
+  .nome {
+    background-color: #609d9f;
+    padding: 1px 12px;
+    border-radius: 5px;
   }
 
   .feedback-card {

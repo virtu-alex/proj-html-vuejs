@@ -19,8 +19,67 @@ export default {
             type: "Heavy",
             weight: "Max Weight 24000 Kg"
         }
+    ],
+
+    transportDescription: [
+        {
+            text: "Lorem ipsum dolor sit amet",
+        },
+        {
+            text: "consectetur adipisicing elit",
+        },
+        {
+            text: "Non quam, sit nam vel",
+        },
+        {
+            text: "dolor sit amet consectetur adipisicing elit",
+        },
+        {
+            text: "sunt quod natus veritatis tempore fugit",
+        },
+    ],
+    mainServices: [
+        {
+            pic: "require('@/assets/Images/laptop.jpeg')",
+            title: "Technology",
+            text: "We are continually focused on developing technology solutions adapted to our client's needs."
+        },
+        {
+            pic: "@/assets/Images/low-temp.jpeg",
+            title: "Reefer Cargo",
+            text: "Regular and frequent monitoring from the receipt of the loaded container to final destination."
+        },
+        {
+            pic: "@/assets/Images/truck-logo.jpeg",
+            title: "Dry Cargo",
+            text: "We work with most types of dry cargo, from valuable cargo to the most dangerous requiring care."
+        },
+    ],
+    logisticData: [
+        {
+            subtitle: "We Work with innovative methodologies to ensure that the entire delivery process is done from start to finish as planned.",
+        },
+        {
+            procedureTitle: "Collection of information",
+            procedureDescription: "lorem ipsum dolor sit amet consectetur",
+        },
+        {
+            procedureTitle: "Service invoice Sending",
+            procedureDescription: "lorem ipsum dolor sit amet consectetur",
+        },
+        {
+            procedureTitle: "withdrawal of Cargo",
+            procedureDescription: "lorem ipsum dolor sit amet consectetur",
+        },
+        {
+            procedureTitle: "Transport Customer Order",
+            procedureDescription: "lorem ipsum dolor sit amet consectetur",
+        },
+        {
+            procedureTitle: "Succesful Delivery",
+            procedureDescription: "lorem ipsum dolor sit amet consectetur",
+        },
     ]
-
-
 }
+
 
