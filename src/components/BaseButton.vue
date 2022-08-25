@@ -23,7 +23,8 @@
     border-radius: 5px;
     text-transform: uppercase;
     padding: 10px 20px;
-    border: none;
+    border: .5px solid $white;
+    margin-right: 5px;
   }
   
   button:hover {

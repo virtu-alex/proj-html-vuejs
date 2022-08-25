@@ -4,26 +4,30 @@
     <section class="who-we-are">
       <div class="container">
         <div class="row">
-          <div class="col-8 title">
-            <h5 class="presentation">WHO WE ARE</h5>
+          <div class="col-8 title text-secondary">
+            <h5 class="presentation pb-2">WHO WE ARE</h5>
             <h1>
               <strong class="nome p-1">
-                <font-awesome-icon icon="fa-solid fa-gem" /> Excellence </strong
-              ><n class="px-2"> in Transport</n>
+                <font-awesome-icon icon="fa-solid fa-gem" /><strong
+                  class="p-0 color-swap"
+                >
+                  Excellence</strong
+                > </strong
+              ><strong class="px-2 text-black">in Transport</strong>
             </h1>
-            <p class="py-2 text-secondary">
+            <p class="py-2">
               {{ lorem }}
             </p>
-            <p class="py-3 text-secondary">
+            <p class="py-3">
               {{ lorem }}
             </p>
             <p class="py-3 comment">
               {{ lorem }}
             </p>
-            <p class="py-3 text-secondary">
+            <p class="py-3">
               {{ halfLorem }}
             </p>
-            <ul class="text-secondary">
+            <ul class="">
               <li v-for="(description, i) in transportDescription" :key="i">
                 {{ description.text }}
               </li>
@@ -41,18 +45,18 @@
       <div class="container">
         <div class="row">
           <div class="col-7 p-0">
-            <h5 class="presentation">ROAD TRANSPORT</h5>
+            <h5 class="presentation pb-3">ROAD TRANSPORT</h5>
           </div>
-          <h2 class="p-0">
+          <h2 class="px-0 pb-3">
             <strong>Main</strong> <strong class="nome">Services</strong>
           </h2>
           <div class="row p-0">
-            <div class="col-10">
-              <p>
+            <div class="col-7">
+              <p class="py-3">
                 {{ expertiseText }}
               </p>
             </div>
-            <div class="col-2 text-end p-0">
+            <div class="col-5 text-end py-3">
               <BaseButton text="See All" type="secondary" />
             </div>
           </div>
@@ -137,11 +141,7 @@
         </div>
       </div>
     </section>
-    <section class="footer bg-dark py-5 text-white">
-      <div class="container">
-        <FooterList />
-      </div>
-    </section>
+   
   </div>
 </template>
 
@@ -151,7 +151,6 @@
   import LogisticalData from "./LogisticalData.vue";
   import BaseForm from "./BaseForm.vue";
   import ServiceCard from "./ServiceCard.vue";
-  import FooterList from "./FooterList.vue";
   import data from "../data";
   import VehicleTypes from "./VehicleTypes.vue";
   import {library} from "@fortawesome/fontawesome-svg-core";
@@ -179,7 +178,6 @@
       ServiceCard,
       LogisticalData,
       CustomersFeedback,
-      FooterList,
     },
     data() {
       return {...data};
@@ -196,7 +194,7 @@
 
   .presentation {
     color: $bluelagoon;
-    font-size: 1.25rem;
+    font-size: 0.9rem;
     text-transform: uppercase;
     font-weight: bold;
   }
@@ -250,4 +248,9 @@
   .form-color {
     background-color: #ececec;
   }
+
+  .below-footer{
+    height: 40px;
+    background-color: rgb(8, 8, 8);
+}
 </style>

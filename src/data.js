@@ -94,7 +94,7 @@ export default {
             text: "Praesent volutpat justo sit amet elementum malesuada, Prasesent sagittis augue justo, in accumasan orci rhoncus at pellentesque. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         }
     ],
-    about: [
+    abouts: [
         {
             link: "The Company"
         },
@@ -114,7 +114,7 @@ export default {
             link: "Technology"
         },
     ],
-    transport: [
+    transports: [
         {
             link: "Industrialized"
         },
@@ -134,7 +134,7 @@ export default {
             link: "And others"
         },
     ],
-    support: [
+    supports: [
         {
             link: "Resposibility"
         },
@@ -156,19 +156,19 @@ export default {
     ],
     circle: [
         {
-            number: "1"
+            number: "01"
         },
         {
-            number: "2"
+            number: "02"
         },
         {
-            number: "3"
+            number: "03"
         },
         {
-            number: "4"
+            number: "04"
         },
         {
-            number: "5"
+            number: "05"
         },
     ]
 }

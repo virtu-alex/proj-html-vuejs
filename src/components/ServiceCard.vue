@@ -6,17 +6,17 @@
       :key="i"
     >
       <img
-        class="icons"
+        class="icons position-relative"
         :src="require(`@/assets/Images/${service.pic}`)"
-        alt=""
+        alt="logo"
       />
-      <img
-        class="arrow"
+      <!-- <img
+        class="arrow position-absolute"
         :src="require(`@/assets/Images/${service.arrow}`)"
-        alt=""
-      />
-      <h5>{{ service.title }}</h5>
-      <p>{{ service.text }}</p>
+        alt="arrow"
+      /> -->
+      <h5 class="pt-3">{{ service.title }}</h5>
+      <p class="py-3">{{ service.text }}</p>
     </div>
   </div>
 </template>
@@ -29,8 +29,7 @@
       return {
         mainServices: data["mainServices"],
       };
-    },
-    components: {},
+    }
   };
 </script>
 <style lang="scss" scoped>
@@ -48,11 +47,5 @@
     padding: 5px;
     background-color: rgb(123, 203, 206, 0.3);
     color: #038384;
-  }
-
-  .arrow {
-    width: 30px;
-    top: 10px;
-    right: 0;
   }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="col-7">
+  <div class="col-7 my-5">
     <h5 class="presentation">Send a message</h5>
     <h1 class="py-3 fw-bold">Get in <strong class="nome color-swap"> Touch </strong></h1>
     <p class="py-3">We will respond to your message as soon as possible.</p>
@@ -42,7 +42,7 @@
           <div class="col-md-6 py-3">
             <div class="form-group">
               <select id="form_need" name="need" class="form-control">
-                <option selected disabled value="">More Info</option>
+                <option selected disabled value="">More Info <strong class="text-end">></strong></option>
                 <option>Request Invoice for order</option>
                 <option>Request order status</option>
                 <option>Haven't received cashback yet</option>
