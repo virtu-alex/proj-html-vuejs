@@ -1,7 +1,7 @@
 <template>
   <div class="col-7">
-    <h5>Send a message</h5>
-    <h1 class="py-3">Get in Touch</h1>
+    <h5 class="presentation">Send a message</h5>
+    <h1 class="py-3 fw-bold">Get in <strong class="nome color-swap"> Touch </strong></h1>
     <p class="py-3">We will respond to your message as soon as possible.</p>
 
     <form role="form">
@@ -12,7 +12,7 @@
               <input
                 type="text"
                 name="name"
-                class="form-control form-color"
+                class="form-control"
                 placeholder="Name"
               />
             </div>
@@ -78,4 +78,6 @@
     name: "BaseForm"
   };
 </script>
-<style lang=""></style>
+<style lang="scss">
+
+</style>

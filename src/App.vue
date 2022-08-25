@@ -19,9 +19,7 @@
 </script>
 
 <style lang="scss">
-  @import "~bootstrap/scss/bootstrap";
+  @import "src/assets/Images/sass/style.scss";
 
-  ul {
-    list-style: none;
-  }
+  
 </style>

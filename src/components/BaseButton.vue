@@ -1,30 +1,40 @@
 <template>
-  <button :class="type === 'secondary' ? 'secondary' : ''" role="button">{{text}}</button>
+  <button :class="type === 'secondary' ? 'secondary' : ''" role="button">
+    {{ text }}
+  </button>
 </template>
 
 <script>
   export default {
     name: "BaseButton",
     props: {
-        text: String,
-        type: String,
-    }
+      text: String,
+      type: String,
+    },
   };
 </script>
 
 <style lang="scss" scoped>
+  @import "src/assets/Images/sass/style.scss";
+
   button {
-    background-color: #038384;
+    background-color: $bluelagoon;
     color: whitesmoke;
     border-radius: 5px;
     text-transform: uppercase;
     padding: 10px 20px;
     border: none;
   }
-  .secondary{
-      background-color: transparent;
-      border: 1px solid #038384;
-      padding-left: 20px;
-      padding-right: 20px;
+  
+  button:hover {
+    filter: brightness(105%);
+    border: inset 1px white;
   }
+  .secondary {
+    background-color: transparent;
+    border: 1px solid $bluelagoon;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
 </style>

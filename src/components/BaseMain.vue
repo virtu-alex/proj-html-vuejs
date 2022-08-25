@@ -6,7 +6,11 @@
         <div class="row">
           <div class="col-8 title">
             <h5 class="presentation">WHO WE ARE</h5>
-            <h1>Excellence in Transport</h1>
+            <h1>
+              <strong class="nome p-1">
+                <font-awesome-icon icon="fa-solid fa-gem" /> Excellence </strong
+              ><n class="px-2"> in Transport</n>
+            </h1>
             <p class="py-2 text-secondary">
               {{ lorem }}
             </p>
@@ -36,18 +40,20 @@
     <section id="services" class="main-services pt-5 text-white bg-dark">
       <div class="container">
         <div class="row">
-          <div class="col-7">
+          <div class="col-7 p-0">
             <h5 class="presentation">ROAD TRANSPORT</h5>
           </div>
-          <h2><strong>Main</strong> <strong class="nome">Services</strong></h2>
-          <div class="row">
+          <h2 class="p-0">
+            <strong>Main</strong> <strong class="nome">Services</strong>
+          </h2>
+          <div class="row p-0">
             <div class="col-10">
               <p>
                 {{ expertiseText }}
               </p>
             </div>
-            <div class="col-2">
-              <BaseButton />
+            <div class="col-2 text-end p-0">
+              <BaseButton text="See All" type="secondary" />
             </div>
           </div>
         </div>
@@ -56,47 +62,32 @@
     </section>
     <!-- LOGISTICAL SECTION -->
     <section id="process" class="logistical pt-5">
-      <div class="col-2">
-        <h5>Collection of information</h5>
-        <p>{{ halfLorem }}</p>
-      </div>
-      <div class="col-2">
-        <h5>Collection of information</h5>
-        <p>{{ halfLorem }}</p>
-      </div>
-      <div class="col-2">
-        <h5>Collection of information</h5>
-        <p>{{ halfLorem }}</p>
-      </div>
-      <div class="col-2">
-        <h5>Collection of information</h5>
-        <p>{{ halfLorem }}</p>
-      </div>
+      <LogisticalData />
     </section>
     <!-- RESULTS SECTION -->
     <section id="testimonials" class="results text-white">
       <div class="container">
-        <div class="row">
-          <div class="col">
-            <h5>What are we doing</h5>
-            <h1>Results in Numbers</h1>
+        <div class="row justify-content-center text-center">
+          <div class="col-6 py-3">
+            <h5 class="pb-3 presentation">What are we doing</h5>
+            <h1><strong class="nome">Results</strong> in Numbers</h1>
           </div>
-          <div class="row pt-5 text-center">
-            <div class="col-3">
+          <div class="row py-5 mt-3 text-center fw-bold">
+            <div class="col-3 presentation">
               <h3>128</h3>
-              <p>Certifications</p>
+              <p class="text-white">Certifications</p>
             </div>
-            <div class="col-3">
+            <div class="col-3 presentation">
               <h3>230</h3>
-              <p>Employees</p>
+              <p class="text-white">Employees</p>
             </div>
-            <div class="col-3">
+            <div class="col-3 presentation">
               <h3>517</h3>
-              <p>Customers</p>
+              <p class="text-white">Customers</p>
             </div>
-            <div class="col-3">
+            <div class="col-3 presentation">
               <h3>94</h3>
-              <p>Countries Served</p>
+              <p class="text-white">Countries Served</p>
             </div>
           </div>
         </div>
@@ -104,41 +95,12 @@
     </section>
     <!-- TRUSTED FEEDBACK SECTION -->
     <section class="feedback bg-dark text-white">
-      <div class="container pt-5">
-        <div class="row justify-content-center">
-          <div class="col-8 text-center">
-            <h5>Curstomer testimonials</h5>
-            <h1>Trusted Feedback</h1>
-            <p>
-              We Work intensively in search of ideals that can add up in the
-              lives of our curstomers. This is what moves us and we are grateful
-              for the recognition.
-            </p>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col p-2 feedback-card">
-            <img
-              :src="require('@/assets/Images/logo-1.png')"
-              alt="WooCommerce"
-            />
-            <p>{{ feedbackText }}</p>
-          </div>
-          <div class="col mx-3 p-2 feedback-card">
-            <img :src="require('@/assets/Images/logo-2.png')" alt="WordPress" />
-            <p>{{ feedbackText }}</p>
-          </div>
-          <div class="col p-2 feedback-card">
-            <img :src="require('@/assets/Images/logo-3.png')" alt="Pingdom" />
-            <p>{{ feedbackText }}</p>
-          </div>
-        </div>
-      </div>
+      <CustomersFeedback />
     </section>
     <!-- SEND A MESSAGE SECTION -->
     <section class="send-message">
       <div class="container pt-5">
-        <div class="row">
+        <div class="row align-items-center">
           <BaseForm />
           <div class="col-5">
             <ul>
@@ -149,26 +111,26 @@
               <li class="py-1">
                 <p>{{ halfLorem }}</p>
               </li>
-              <li class="py-3">
+              <li class="py-3 d-flex align-items-center">
                 <font-awesome-icon
-                  class="phone px-2"
+                  class="contacts-icons"
                   icon="fa-solid fa-phone"
                 />
-                <span>{{ phone }}</span>
+                <span class="px-2 color-swap">{{ phone }}</span>
               </li>
-              <li class="py-3">
+              <li class="py-3 d-flex align-items-center">
                 <font-awesome-icon
-                  class="mail px-2"
+                  class="contacts-icons"
                   icon="fa-solid fa-envelope"
                 />
-                <span>{{ mail }}</span>
+                <span class="px-2 color-swap">{{ mail }}</span>
               </li>
-              <li class="py-3">
+              <li class="py-3 d-flex align-items-center">
                 <font-awesome-icon
-                  class="street px-2"
-                  icon="fa-solid fa-envelope"
+                  class="contacts-icons"
+                  icon="fa-solid fa-compass"
                 />
-                <span>{{ street }}</span>
+                <span class="px-2 color-swap">{{ street }}</span>
               </li>
             </ul>
           </div>
@@ -177,23 +139,7 @@
     </section>
     <section class="footer bg-dark py-5 text-white">
       <div class="container">
-        <div class="">
-          <div class="col-3">
-            <ul>
-              <li>
-                <BaseLogo />
-              </li>
-              <li>A Functional HTML Template for Corporate & Business.</li>
-              <li>{{ phone }}</li>
-              <li>{{ mail }}</li>
-              <li>{{ street }}</li>
-              <li><BaseButton /></li>
-            </ul>
-          </div>
-          <div class="col-3"></div>
-          <div class="col-3"></div>
-          <div class="col-3"></div>
-        </div>
+        <FooterList />
       </div>
     </section>
   </div>
@@ -201,9 +147,11 @@
 
 <script>
   import BaseButton from "./BaseButton.vue";
-  import BaseLogo from "./BaseLogo.vue";
+  import CustomersFeedback from "./CustomersFeedback.vue";
+  import LogisticalData from "./LogisticalData.vue";
   import BaseForm from "./BaseForm.vue";
   import ServiceCard from "./ServiceCard.vue";
+  import FooterList from "./FooterList.vue";
   import data from "../data";
   import VehicleTypes from "./VehicleTypes.vue";
   import {library} from "@fortawesome/fontawesome-svg-core";
@@ -212,10 +160,15 @@
   import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome";
 
   /* import specific icons */
-  import {faPhone, faEnvelope} from "@fortawesome/free-solid-svg-icons";
+  import {
+    faPhone,
+    faEnvelope,
+    faCompass,
+    faGem,
+  } from "@fortawesome/free-solid-svg-icons";
 
   /* add icons to the library */
-  library.add(faPhone, faEnvelope);
+  library.add(faPhone, faEnvelope, faCompass, faGem);
   export default {
     name: "BaseMain",
     components: {
@@ -223,8 +176,10 @@
       BaseButton,
       FontAwesomeIcon,
       BaseForm,
-      BaseLogo,
       ServiceCard,
+      LogisticalData,
+      CustomersFeedback,
+      FooterList,
     },
     data() {
       return {...data};
@@ -232,55 +187,64 @@
   };
 </script>
 <style lang="scss">
+  @import "src/assets/Images/sass/style.scss";
+
   .who-we-are {
     padding-top: 100px;
     padding-bottom: 100px;
   }
 
   .presentation {
-    color: #52bbbb;
+    color: $bluelagoon;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    font-weight: bold;
   }
 
   .comment {
-    border-left: 4px solid rgb(96, 157, 159, 0.4);
+    border-left: 5px solid rgb($bluelagoon, 0.2);
     padding-left: 20px;
     font-style: italic;
-    color: grey;
+  }
+
+  .color-swap {
+    color: $bluelagoon;
   }
 
   .results {
     background-image: url("/src/assets/Images/bg-10.jpg");
+    background-position: center;
     background-size: cover;
-    padding-top: 80px;
+    padding-top: 100px;
     padding-bottom: 200px;
   }
   .nome {
-    background-color: #609d9f;
+    background-color: rgb(123, 203, 206, 0.3);
     padding: 1px 12px;
     border-radius: 5px;
+    font-weight: bold;
   }
 
   .feedback-card {
-    background-color: #69696d;
-    width: calc(90% / 3);
+    border-radius: 10px;
+    background-color: $shark;
+    height: 230px;
+    margin-bottom: 90px;
   }
+
   .title ul {
     list-style: disc;
   }
-
-  .phone {
-    background-color: aqua;
-    border-radius: 50%;
+  .fa-gem {
+    color: $bluelagoon;
   }
-
-  .mail {
-    background-color: aqua;
+  .contacts-icons {
+    color: $bluelagoon;
+    background-color: $seanymph;
     border-radius: 50%;
-  }
-
-  .street {
-    background-color: aqua;
-    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    padding: 10px;
   }
 
   .form-color {
