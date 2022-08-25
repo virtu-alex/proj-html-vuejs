@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container informations">
     <div class="row justify-content-center text-center">
       <div class="col-4 py-5">
         <h5 class="presentation pb-3 text-uppercase">How it Works in practice</h5>
@@ -58,5 +58,9 @@
     color: $bluelagoon;
     font-weight: bold;
     font-size: 1.2rem;
+  }
+
+  .informations{
+    min-width: 100%;
   }
 </style>
